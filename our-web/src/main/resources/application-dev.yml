@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password:
+#mapper。xml地址的指定
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+#日志配置文件的指定
+logging:
+  config:
+    classpath: logback-spring.xml
+
