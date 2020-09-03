@@ -3,10 +3,6 @@ package com.our.common.base;
 
 /**
  * @ClassName Results
- * @Description TODO
- * @Author shaozhenjun
- * @Date 19-7-9 下午4:19
- * @Version 1.0
  */
 public class Results {
     public static <T> Result success() {

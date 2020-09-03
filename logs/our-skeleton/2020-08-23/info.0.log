@@ -1,5 +1,5 @@
-2020-08-23 13:17:21.553 [INFO ] [main] com.our.ourweb.OurWebApplication:55- Starting OurWebApplication on DESKTOP-J5IDREQ with PID 22088 (E:\IDEAWorkSpace\our-skeleton\our-web\target\classes started by yangz in E:\IDEAWorkSpace\our-skeleton)
-2020-08-23 13:17:21.559 [INFO ] [main] com.our.ourweb.OurWebApplication:655- The following profiles are active: dev
+2020-08-23 13:17:21.553 [INFO ] [main] OurWebApplication:55- Starting OurWebApplication on DESKTOP-J5IDREQ with PID 22088 (E:\IDEAWorkSpace\our-skeleton\our-web\target\classes started by yangz in E:\IDEAWorkSpace\our-skeleton)
+2020-08-23 13:17:21.559 [INFO ] [main] OurWebApplication:655- The following profiles are active: dev
 2020-08-23 13:17:23.344 [INFO ] [main] o.s.b.w.e.tomcat.TomcatWebServer:108- Tomcat initialized with port(s): 8080 (http)
 2020-08-23 13:17:23.361 [INFO ] [main] o.a.coyote.http11.Http11NioProtocol:173- Initializing ProtocolHandler ["http-nio-8080"]
 2020-08-23 13:17:23.362 [INFO ] [main] o.a.catalina.core.StandardService:173- Starting service [Tomcat]
@@ -9,7 +9,7 @@
 2020-08-23 13:17:23.993 [INFO ] [main] o.s.s.c.ThreadPoolTaskExecutor:181- Initializing ExecutorService 'applicationTaskExecutor'
 2020-08-23 13:17:24.229 [INFO ] [main] o.a.coyote.http11.Http11NioProtocol:173- Starting ProtocolHandler ["http-nio-8080"]
 2020-08-23 13:17:24.269 [INFO ] [main] o.s.b.w.e.tomcat.TomcatWebServer:220- Tomcat started on port(s): 8080 (http) with context path ''
-2020-08-23 13:17:24.282 [INFO ] [main] com.our.ourweb.OurWebApplication:61- Started OurWebApplication in 4.322 seconds (JVM running for 8.191)
+2020-08-23 13:17:24.282 [INFO ] [main] OurWebApplication:61- Started OurWebApplication in 4.322 seconds (JVM running for 8.191)
 2020-08-23 13:17:41.043 [INFO ] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]:173- Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-08-23 13:17:41.044 [INFO ] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet:525- Initializing Servlet 'dispatcherServlet'
 2020-08-23 13:17:41.055 [INFO ] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet:547- Completed initialization in 11 ms

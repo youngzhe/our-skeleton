@@ -3,6 +3,8 @@ package com.our.repository.service;
 import com.our.repository.entity.Sys;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.List;
+
 /**
  * <p>
  *  服务类
@@ -13,4 +15,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface SysService extends IService<Sys> {
 
+    List<Sys> getAllSys();
 }

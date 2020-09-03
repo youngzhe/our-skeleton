@@ -1,5 +1,6 @@
-package com.our.ourweb.config;
+package com.our.config;
 
+import com.our.intercept.MyInterceptor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
@@ -14,21 +15,24 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
  * 重写请求映射处理器处理版本url映射
- *
- * @author chen
- * @version v1.0
- * @ClassName WebMvcConfig
- * @create 2018年10月31日 下午3:38:49
- * @lastUpdate 2018年10月31日 下午3:38:49
  */
 @Configuration
 public class WebMvcConfig implements WebMvcConfigurer {
+    /**
+     * 静态资源映射路径
+     */
     @Value("${file.static-map-path}")
     private String staticMapPath;
+    /**
+     * 静态资源存放路径
+     */
     @Value("${file.static-location}")
     private String staticLocation;
 
-
+    /**
+     * 权限拦截器
+     * @return
+     */
     @Bean
     public AuthRestInterceptor getAuthInterceptor() {
         return new AuthRestInterceptor();
@@ -42,10 +46,10 @@ public class WebMvcConfig implements WebMvcConfigurer {
                 .order(2)
                 .excludePathPatterns(patterns);
 
-//        registry.addInterceptor(getAuthInterceptor())
-//                .addPathPatterns("/v1/**")
-//                .order(1)
-//                .excludePathPatterns(patterns);
+        registry.addInterceptor(new MyInterceptor())
+                .addPathPatterns("/skeleton/**")
+                .order(1)
+                .excludePathPatterns(patterns);
     }
     /**
      * 拦截器对跨域处理有影响，这里用filter来处理跨域
@@ -68,12 +72,18 @@ public class WebMvcConfig implements WebMvcConfigurer {
         return bean;
     }
 
-
+    /**
+     * 资源上传 映射处理
+     */
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler(staticMapPath).addResourceLocations("file:" + staticLocation);
     }
 
+    /**
+     * 防cors攻击处理
+     * @param registry
+     */
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")

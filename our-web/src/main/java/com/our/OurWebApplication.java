@@ -1,10 +1,11 @@
-package com.our.ourweb;
+package com.our;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages = {"com.our.ourweb.controller"})
+/**(scanBasePackages = {"com.our.controller"})*/
+@SpringBootApplication
 @MapperScan(basePackages = {"com.our.repository.mapper"})
 public class OurWebApplication {
 

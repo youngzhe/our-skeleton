@@ -1,14 +1,21 @@
+server:
+  port: 8899
+
 spring:
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/test
+#    driver-class-name: com.mysql.cj.jdbc.Driver  #低版本driver不需要指定&serverTimezone=Asia时区
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://101.200.227.167:3316/our-skeleton?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8
     username: root
-    password:
-#mapper。xml地址的指定
+    password: 123456
+#mapper xml地址的指定
 mybatis-plus:
-  mapper-locations: classpath:/mapper/*Mapper.xml
+  mapper-locations: classpath*:mapper/*.xml
 #日志配置文件的指定
 logging:
   config:
     classpath: logback-spring.xml
-
+#文件上传及映射路径
+file:
+  static-map-path: /images/
+  static-location: D:/images

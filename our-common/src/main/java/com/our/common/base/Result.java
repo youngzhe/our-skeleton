@@ -7,11 +7,8 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
+ * 结果返回类
  * @ClassName Result
- * @Description TODO
- * @Author shaozhenjun
- * @Date 19-7-9 下午4:13
- * @Version 1.0
  */
 @Data
 @ApiModel(value = "返回类")
@@ -29,8 +26,8 @@ public class Result<T> implements Serializable {
     @ApiModelProperty(value = "数据")
     private T data;
 
-    public Result setCode(ResultCode resultCode) {
-        this.code = resultCode.code();
+    public Result setCode(Integer code) {
+        this.code = code;
         return this;
     }
     public Result(){}
